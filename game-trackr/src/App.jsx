@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import './App.css'
+
 import Navbar from './components/Navbar/Navbar'
+import Dashboard from './components/Dashboard/Dashboard.jsx'
 
 function App() {
 
@@ -38,13 +40,7 @@ function App() {
   return (
     <>
     <Navbar />
-
-    <ul>
-        {games.map((game) => (
-          <li key={game.id}>{game.name}</li> 
-        ))}
-    </ul>
-    
+    <Dashboard games={games}/>
     </>
   )
 }
