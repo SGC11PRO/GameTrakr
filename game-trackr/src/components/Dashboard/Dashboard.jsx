@@ -33,8 +33,18 @@ export default function Dashboard({ games, onUpdateGameCover }) {
                             onClick={() => handleImageClick(game.id)}
                         />
                         <div className="game-details">
-                            <h2>{game.name}</h2>
-                            <p>Progress: {game.progress}%</p>
+                            <div className="game-header">
+                                <h2 className="game-title">{game.name}</h2>
+                                <span className="progress-text">{game.progress}%</span>
+                            </div>
+                            
+                            <div className='progress-container'>
+                                <div
+                                    className='progress-bar'
+                                    style={{ width: `${game.progress}%` }}
+                                ></div>
+                            </div>
+                            
                         </div>
                         <input
                             type="file"

@@ -88,3 +88,28 @@ li {
 .game-details {
     padding: 20px;
 }
+
+.progress-text {
+    position: relative;
+
+    font-weight: 300;
+    color: var(--secondary-foreground);
+    font-size: 12px;
+    font-family: 'Inter';
+}
+
+.progress-container {
+    width: 100%;
+    height: 10px;
+    background: var(--card);
+    border-radius: 5px;
+    overflow: hidden;
+
+    margin-top: 10px;
+}
+
+.progress-bar {
+    height: 100%;
+    background: var(--primary); /* Color de la barra de progreso */
+    transition: width 0.3s ease; /* Transición suave para cambios de progreso */
+}
