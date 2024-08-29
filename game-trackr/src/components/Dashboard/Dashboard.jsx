@@ -31,8 +31,6 @@ export default function Dashboard({ games, onUpdateGameCover }) {
     fileInputRefs.current[gameId].click();
   };
 
-  console.log(games.map(game => (game.coverImage)))
-
   return (
     <div className='dashboard'>
       <ul className='game-list'>
@@ -48,11 +46,12 @@ export default function Dashboard({ games, onUpdateGameCover }) {
               <h2>{game.name}</h2>
               <div className="progress-container">
                 <span>{game.progress}%</span>
-                <progress
-                  value={game.progress}
-                  max="100"
-                  className='progress-bar'
-                ></progress>
+                <div className='progress-bar-container'>
+                  <div
+                    className='progress-bar'
+                    style={{ width: `${game.progress}%` }}
+                  ></div>
+                </div>
               </div>
             </div>
             <input
