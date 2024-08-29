@@ -4,6 +4,8 @@ import './App.css'
 import Navbar from './components/Navbar/Navbar'
 import Dashboard from './components/Dashboard/Dashboard.jsx'
 
+import api from './axiosConfig'; // Importa tu configuración de Axios
+
 function App() {
 
   const imgPlaceholder = '/public/placeholder-img.jpg'
@@ -43,11 +45,30 @@ function App() {
     }
   ])
 
+  // actualizar cover
   const updateGameCover = (gameId, newCoverImage) => {
     setGames(games.map(game =>
       game.id === gameId ? { ...game, coverImage: newCoverImage } : game
     ));
   };
+
+    // Función para añadir un nuevo juego
+    const addGame = async (name) => {
+      try {
+        const response = await api.post('/games', {
+          name,
+          progress: 0,
+          coverImage: imgPlaceholder,
+          isFavorite: false
+        });
+  
+        // Suponiendo que la API devuelve el nuevo juego con un ID
+        setGames([...games, response.data]);
+      } catch (error) {
+        console.error('Error adding game:', error);
+      }
+    };
+  
 
 
   return (
