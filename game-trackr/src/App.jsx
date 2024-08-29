@@ -37,10 +37,17 @@ function App() {
     }
   ])
 
+  const updateGameCover = (gameId, newCoverImage) => {
+    setGames(games.map(game =>
+      game.id === gameId ? { ...game, coverImage: newCoverImage } : game
+    ));
+  };
+
+
   return (
     <>
     <Navbar />
-    <Dashboard games={games}/>
+    <Dashboard games={games} onUpdateGameCover={updateGameCover}/>
     </>
   )
 }
