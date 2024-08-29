@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+:root {
+    --background: hsl(240 5% 6%);
+    --foreground: hsl(60 5% 90%);
+
+    --primary: hsl(240 0% 90%);
+    --primary-foreground: hsl(60 0% 0%);
+
+    --secondary: hsl(240 4% 15%);
+    --secondary-foreground: hsl(60 5% 85%);
+
+    --accent: hsl(240 0% 13%);
+    --accent-foreground: hsl(60 0% 100%);
+
+    --muted: hsl(240 5% 25%);
+    --muted-foreground: hsl(60 5% 85%);
+
+    --card: hsl(240 4% 10%);
+    --card-foreground: hsl(60 5% 90%);
+
+    --destructive: hsl(0 60% 50%);
+    --destructive-foreground: hsl(0 0% 98%);
+
+    --popover: hsl(240 5% 15%);
+    --popover-foreground: hsl(60 5% 85%);
+
+    --border: hsl(240 6% 20%);
+
+    --input: hsl(240 6% 20%);
+
+    --ring: hsl(240 5% 90%);
+}
+
+h1 {
+    font-family: 'Manrope';
+    color: var(--primary);
+
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+}
+
+.navbar {
+    background-color: var(--background);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 12px 20px;
+
+    border-bottom: 2px solid var(--border);
+}
+
+.add-game {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.add-game .input-text {
+    background-color: var(--background);
+    height: 2.25rem;
+
+    border-radius: 0.5rem;
+    border: 1px solid var(--border);
+
+    color: var(--primary);
+    font-weight: 400;
+
+    padding: 0 10px;
+}
+
+.add-game .submit {
+    height: 2.5rem;
+    width: 3.5rem;
+
+    border-radius: 0.5rem;
+    border-color: transparent;
+
+    background-color: var(--foreground);
+    color: var(--background);
+
+    font-size: 0.875rem;
+
+    cursor: pointer;
+}
