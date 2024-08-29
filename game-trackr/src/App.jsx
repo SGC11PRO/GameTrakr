@@ -1,42 +1,50 @@
+import { useState } from 'react'
 import './App.css'
 import Navbar from './components/Navbar/Navbar'
 
 function App() {
 
-  const games = 
+  const [games, setGames] = useState(
   [
     {
       id: 1,
       name: 'Uncharted 4',
-      progress: 90,
-      isFavorite: true
+      progress: 30,
+      isFavorite: false
     },
 
     {
       id: 2,
-      name: 'Uncharted 4',
-      progress: 90,
+      name: 'Grand Theft Auto V',
+      progress: 100,
       isFavorite: true
     },
 
     {
       id: 3,
-      name: 'Uncharted 4',
-      progress: 90,
-      isFavorite: true
+      name: 'Minecraft',
+      progress: 75,
+      isFavorite: false
     },
 
     {
       id: 4,
-      name: 'Uncharted 4',
-      progress: 90,
+      name: 'Star Wars Battlefront 2',
+      progress: 100,
       isFavorite: true
     }
-  ]
+  ])
 
   return (
     <>
     <Navbar />
+
+    <ul>
+        {games.map((game) => (
+          <li key={game.id}>{game.name}</li> 
+        ))}
+    </ul>
+    
     </>
   )
 }
