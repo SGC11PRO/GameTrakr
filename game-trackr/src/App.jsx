@@ -6,34 +6,40 @@ import Dashboard from './components/Dashboard/Dashboard.jsx'
 
 function App() {
 
+  const imgPlaceholder = '/public/placeholder-img.jpg'
+
   const [games, setGames] = useState(
   [
     {
       id: 1,
-      name: 'Uncharted 4',
+      name: 'Hitman 3',
       progress: 30,
-      isFavorite: false
+      isFavorite: false,
+      coverImage: imgPlaceholder
     },
 
     {
       id: 2,
       name: 'Grand Theft Auto V',
       progress: 100,
-      isFavorite: true
+      isFavorite: true,
+      coverImage: imgPlaceholder
     },
 
     {
       id: 3,
-      name: 'Minecraft',
+      name: 'Diablo IV',
       progress: 75,
-      isFavorite: false
+      isFavorite: false,
+      coverImage: imgPlaceholder
     },
 
     {
       id: 4,
       name: 'Star Wars Battlefront 2',
       progress: 100,
-      isFavorite: true
+      isFavorite: true,
+      coverImage: imgPlaceholder
     }
   ])
 

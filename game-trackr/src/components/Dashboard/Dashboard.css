@@ -65,6 +65,7 @@ li {
     transition: transform 0.2s ease;
     cursor: crosshair;
     overflow: hidden; /* Asegura que la imagen no se desborde */
+
 }
 
 .game-card:hover {
